@@ -9,7 +9,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-
+import { MatTableModule
+  
+ } from '@angular/material/table';
 import { LoginComponent } from './modules/login/login.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { AppComponent } from './app.component';
@@ -30,7 +32,10 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
     ReactiveFormsModule,
     MatInputModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
+    MatTableModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
