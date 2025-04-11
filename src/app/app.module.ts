@@ -16,12 +16,18 @@ import { LoginComponent } from './modules/login/login.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { DialogInputComponent } from './components/dialog-input/dialog-input.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ToolbarComponent,
     DashboardComponent,
+    DialogInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,8 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
     MatIconModule,
     MatToolbarModule,
     MatTableModule,
-    
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

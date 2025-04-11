@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { DialogInputComponent } from 'src/app/components/dialog-input/dialog-input.component';
 
 type payment = 'Pix' | 'Dinheiro' | 'Sem pagamento';
 interface PeriodicElement {
@@ -27,11 +29,17 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
+  constructor(private dialog: MatDialog){}
+
   displayedColumns: string[] = ['position', 'name', 'paid', 'paymentMethod'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+  
+  openDialog(){
+    this.dialog.open(DialogInputComponent)
   }
 }
