@@ -1,48 +1,65 @@
 <app-toolbar></app-toolbar>
-<div class="content-wrapper">
-  <mat-form-field appearance="outline" class="search-field">
-    <mat-label>Pesquisar</mat-label>
-    <input
-      matInput
-      (keyup)="applyFilter($event)"
-      placeholder="Ex. Nathã Souza Lopes"
-      #input
-    />
-    <mat-icon matPrefix>search</mat-icon>
-  </mat-form-field>
-  <button mat-raised-button color="primary" (click)="openDialog()" class="add-dizimista">Adicionar Dizimista</button>
 
-  
-  <div class="table-wrapper">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 custom-table">
-      <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef> Número </th>
-        <td mat-cell *matCellDef="let element"> {{ element.position }} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Nome </th>
-        <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="paid">
-        <th mat-header-cell *matHeaderCellDef> Pago </th>
-        <td mat-cell *matCellDef="let element"> {{ element.paid }} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="paymentMethod">
-        <th mat-header-cell *matHeaderCellDef> Forma de Pagamento </th>
-        <td mat-cell *matCellDef="let element"> {{ element.paymentMethod }} </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  
-      <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">
-          Nenhum dado corresponde ao filtro "{{ input.value }}"
-        </td>
-      </tr>
-    </table>
-  </div> 
+<div class="content-wrapper">
+  <div class="content-phrase">
+    <h2>
+      {{ messageText }} –
+      <span class="author-highlight">{{ messageAuthor }}</span>
+    </h2>
+
+    <div class="phrase-actions">
+      <div>
+        <mat-form-field appearance="outline" class="search-field">
+          <mat-label>Pesquisar</mat-label>
+          <input matInput placeholder="Ex. Nathã Souza Lopes" #input />
+          <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="openDialog()"
+          class="add-dizimista"
+        >
+          Adicionar Dizimista
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-cards">
+    <div class="metric-card">
+      <mat-icon class="metric-icon" color="primary">groups</mat-icon>
+      <h3 class="metric-title">Total de Dizimistas</h3>
+      <p class="metric-value">238</p>
+      <span class="metric-desc">Cadastrados ativos e inativos</span>
+    </div>
+
+    <div class="metric-card">
+      <mat-icon class="metric-icon" color="accent">payments</mat-icon>
+      <h3 class="metric-title">Valor Arrecadado</h3>
+      <p class="metric-value">R$ 12.450,00</p>
+      <span class="metric-desc">Total no mês</span>
+    </div>
+
+    <div class="metric-card">
+      <mat-icon class="metric-icon" color="warn">person_add</mat-icon>
+      <h3 class="metric-title">Novos no Mês</h3>
+      <p class="metric-value">+15</p>
+      <span class="metric-desc">Entraram em abril</span>
+    </div>
+  </div>
+  <div class="birthday-section">
+    <h3>Aniversariantes do Mês</h3>
+    <div class="birthday-table">
+      <div class="birthday-table-header">
+        <div class="birthday-table-cell">Nome</div>
+        <div class="birthday-table-cell">Data de Aniversário</div>
+        <div class="birthday-table-cell">Desde Quando é Dizimista</div>
+      </div>
+      <div class="birthday-table-row">
+        <div class="birthday-table-cell">José da Silva</div>
+        <div class="birthday-table-cell">15 de Abril</div>
+        <div class="birthday-table-cell">Janeiro de 2020</div>
+      </div>
+    </div>
+  </div>
 </div>

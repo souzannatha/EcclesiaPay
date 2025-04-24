@@ -4,42 +4,39 @@ import { MatTableDataSource } from '@angular/material/table';
 import { DialogInputComponent } from 'src/app/components/dialog-input/dialog-input.component';
 
 type payment = 'Pix' | 'Dinheiro' | 'Sem pagamento';
-interface PeriodicElement {
-  name: string;
-  position: number;
-  paid: string;
-  paymentMethod: payment;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', paid: 'Sim', paymentMethod: 'Pix' },
-  { position: 2, name: 'Helium', paid: 'Sim', paymentMethod: 'Dinheiro' },
-  { position: 3, name: 'Lithium', paid: 'Sim', paymentMethod: 'Pix' },
-  { position: 4, name: 'Beryllium', paid: 'Sim', paymentMethod: 'Dinheiro' },
-  { position: 5, name: 'Boron', paid: 'Sim', paymentMethod: 'Pix' },
-  { position: 6, name: 'Carbon', paid: 'Sim', paymentMethod: 'Pix' },
-  {position: 7,name: 'Nitrogen',paid: 'Não',paymentMethod: 'Sem pagamento',},
-  { position: 8, name: 'Oxygen', paid: 'Não', paymentMethod: 'Sem pagamento' },
-  {position: 9,name: 'Fluorine',paid: 'Não',paymentMethod: 'Sem pagamento' },
-  { position: 10, name: 'Neon', paid: 'Não', paymentMethod: 'Sem pagamento' },
-];
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
-  constructor(private dialog: MatDialog){}
+  messageText = '';
+  messageAuthor = '';
 
-  displayedColumns: string[] = ['position', 'name', 'paid', 'paymentMethod'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  messages: string[] = [
+    '“Nunca se ouviu dizer que alguém que recorreu à Virgem Maria fosse desamparado.” – Santo Afonso de Ligório',
+    '“Com Maria, tudo por Jesus.” – São Marcelino Champagnat',
+    '“A devoção à Santíssima Virgem é sinal certo de predestinação.” – São Luís Maria Grignion de Montfort',
+    '“Recorrei a Maria, ela nunca abandona os seus filhos.” – São Padre Pio',
+    '“Confia em Maria e verás milagres.” – Santa Teresa de Calcutá',
+    '“A quem Deus quer fazer muito santo, faz muito devoto da Virgem Maria.” – São Luís Maria',
+    '“Maria é o caminho mais seguro, mais curto e mais perfeito para chegar até Jesus.” – São Luís Maria',
+    '“A oração é a chave do céu e Maria é a porta.” – Santo Agostinho',
+    '“Permanecei unidos a Maria, e tudo ficará bem.” – São João Bosco',
+    '“O Rosário é a arma para estes tempos.” – São Padre Pio',
+  ];
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  constructor(private dialog: MatDialog) {}
+
+  ngOnInit() {
+    const randomPhrase = Math.floor(Math.random() * this.messages.length);
+    const fullMessage = this.messages[randomPhrase];
+    const parts = fullMessage.split(' – ');
+    this.messageText = parts[0];
+    this.messageAuthor = parts[1] ?? '';
   }
-  
-  openDialog(){
-    this.dialog.open(DialogInputComponent)
+
+  openDialog() {
+    this.dialog.open(DialogInputComponent);
   }
 }

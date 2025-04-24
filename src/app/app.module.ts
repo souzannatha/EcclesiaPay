@@ -3,23 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import{ MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import { MatTableModule
-  
- } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCardModule } from '@angular/material/card';
+
 import { LoginComponent } from './modules/login/login.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DialogInputComponent } from './components/dialog-input/dialog-input.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
@@ -42,9 +42,11 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatTableModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule,
+    MatCardModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

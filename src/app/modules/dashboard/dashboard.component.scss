@@ -1,57 +1,166 @@
-.table-wrapper {
-  margin-top: 24px;
-  overflow-x: auto;
-  background-color: #ffffff;
-  padding: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.content-phrase {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    max-width: 800px;
+    line-height: 1.4;
+    color: #333;
+  }
 }
 
-.custom-table {
-  width: 100%;
-  border-collapse: collapse;
-
-  th {
-    background-color: #f1f1f1;
-    font-weight: 600;
-    color: #3f51b5;
-    padding: 12px;
-    text-align: left;
-    font-size: 14px;
+  .phrase-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    width: 900px;
+    max-width: 100%;
   }
-
-  td {
-    padding: 12px;
-    font-size: 14px;
-    border-top: 1px solid #e0e0e0;
-  }
-
-  tr.mat-row:hover {
-    background-color: #f9f9f9;
-  }
-
-  tr.mat-header-row {
-    border-bottom: 2px solid #e0e0e0;
-  }
-
-  tr.mat-row:last-child td {
-    border-bottom: none;
-  }
-
-}
-
 
 .search-field {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 60px;
-  margin-left: 20px;
-
+  width: 400px;
   mat-icon {
     color: rgba(0, 0, 0, 0.54);
-
+  }
+  input {
+    font-size: 1rem;
   }
 }
 
 .add-dizimista {
-  margin-left: 20px;
+  height: 50px;
+  font-weight: 600;
+  padding: 1.2rem 2rem;
+  white-space: nowrap;
+  margin-left: 1rem;
 }
+
+.author-highlight {
+  color: #6A0DAD;
+  font-weight: 600;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.metric-card {
+  width: 250px;
+  height: 250px;
+  background: #ffffff; // mais contraste que o cinza anterior
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // mais intensa
+  border: 2px solid rgba(106, 13, 173, 0.15); // borda com leve roxo
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .metric-icon {
+    margin-bottom: 1rem;
+    color: #4a148c;
+  }
+  .metric-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+
+  .metric-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0.25rem 0;
+    color: #4a148c;
+  }
+
+  .metric-desc {
+    font-size: 0.875rem;
+    color: #666;
+  }
+}
+.birthday-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.birthday-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.birthday-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+}
+
+.birthday-table-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr; /* Ajustado para mais espaço para 'Desde Quando é Dizimista' */
+  background-color: #6a0dad;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.birthday-table-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.birthday-table-cell {
+  padding: 10px;
+  text-align: center;
+}
+
+
+.birthday-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+
+.birthday-name {
+  font-weight: bold;
+}
+
+.birthday-date {
+  font-size: 14px;
+  color: #888;
+}
+
+
