@@ -14,13 +14,21 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
+import {
+  Church,
+  Lock,
+  LogInIcon,
+  LucideAngularModule,
+  LucideLogIn,
+  UserRound,
+} from 'lucide-angular';
 
 import { LoginComponent } from './modules/login/login.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DialogInputComponent } from './components/dialog-input/dialog-input.component';
-
+import { TitheComponent } from './modules/tithe/tithe.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +36,7 @@ import { DialogInputComponent } from './components/dialog-input/dialog-input.com
     ToolbarComponent,
     DashboardComponent,
     DialogInputComponent,
+    TitheComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +54,7 @@ import { DialogInputComponent } from './components/dialog-input/dialog-input.com
     FormsModule,
     MatPaginatorModule,
     MatCardModule,
+    LucideAngularModule.pick({ Church, UserRound, Lock }),
   ],
   providers: [],
   bootstrap: [AppComponent],

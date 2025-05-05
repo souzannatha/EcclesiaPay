@@ -1,16 +1,49 @@
 <div class="wrapper">
-  <img src="../../../assets/images/christmas-angel-animate.svg" alt="Anjo" class="img" />
-  <form class="wrapper-form">
-    <h2 class="form-title">Login</h2>
-    <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Usuário</mat-label>
-      <input matInput placeholder="Digite seu usuário" />
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Senha</mat-label>
-      <input matInput placeholder="Digite sua senha" type="password" />
-    </mat-form-field>
-    <button mat-flat-button color="primary" class="full-width" (click)="navigateToDashboard()">Entrar</button>
-  </form>
+  <div class="wrapper-form">
+    <div class="form-container">
+      <div class="form">
+        <div class="form-title">
+          <div class="title-header">
+            <lucide-icon name="church" size="36"></lucide-icon>
+            <h1>EcclesiaPay</h1>
+          </div>
+          <p>Gerenciamento de dízimos e ofertas.</p>
+        </div>
+        <form action="" class="form-login">
+          <mat-form-field
+            appearance="outline"
+            floatLabel="always"
+            class="full-width-input"
+          >
+            <mat-label>Usuário</mat-label>
+            <mat-icon matPrefix>
+              <lucide-icon name="user-round"></lucide-icon>
+            </mat-icon>
+            <input type="email" matInput placeholder="Digite seu usuário" />
+          </mat-form-field>
+          <mat-form-field
+            appearance="outline"
+            floatLabel="always"
+            class="full-width-input"
+          >
+            <mat-icon matPrefix>
+              <lucide-icon name="lock"></lucide-icon>
+            </mat-icon>
+            <mat-label>Senha</mat-label>
+            <input type="password" matInput placeholder="Digite sua senha" />
+          </mat-form-field>
+          <button class="button-form" (click)="navigateToDashboard()">Entrar</button>
+        </form>
+      </div>
+      <div class="welcome">
+        <div class="welcome-icon">
+          <lucide-icon name="church" size="110"></lucide-icon>
+        </div>
+        <div class="welcome-title">
+          <h2>Bem-vindo ao EcclesiaPay</h2>
+          <p>Gerencie seus dízimos e ofertas com simplicidade e segurança.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
- 
