@@ -1,27 +1,13 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="#fff">
   <mat-toolbar-row>
+    <lucide-icon color="#000" name="church" size="36"></lucide-icon>
     <span>Ecclesia Pay</span>
     <span class="example-spacer"></span>
-    <button
-      mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-    >
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with share icon"
-    >
-      <mat-icon>share</mat-icon>
-    </button>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
+    <nav class="nav-links">
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/register-tithe">Cadastrar Dizimista</a>
+      <a routerLink="/history">Histórico</a>
+      <a routerLink="/birthday">Aniversáriantes</a>
+    </nav>
   </mat-toolbar-row>
 </mat-toolbar>

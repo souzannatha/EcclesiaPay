@@ -28,7 +28,9 @@ import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DialogInputComponent } from './components/dialog-input/dialog-input.component';
-import { TitheComponent } from './modules/tithe/tithe.component';
+import { HistoryComponent } from './modules/history/history.component';
+import { RegisterTitheComponent } from './modules/register-tithe/register-tithe.component';
+import { BirthdayComponent } from './modules/birthday/birthday.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { TitheComponent } from './modules/tithe/tithe.component';
     ToolbarComponent,
     DashboardComponent,
     DialogInputComponent,
-    TitheComponent,
+    HistoryComponent,
+    RegisterTitheComponent,
+    BirthdayComponent,
   ],
   imports: [
     BrowserModule,

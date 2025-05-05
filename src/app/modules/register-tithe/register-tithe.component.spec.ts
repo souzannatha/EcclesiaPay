@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TitheComponent } from './tithe.component';
+import { RegisterTitheComponent } from './register-tithe.component';
 
-describe('TitheComponent', () => {
-  let component: TitheComponent;
-  let fixture: ComponentFixture<TitheComponent>;
+describe('RegisterTitheComponent', () => {
+  let component: RegisterTitheComponent;
+  let fixture: ComponentFixture<RegisterTitheComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TitheComponent ]
+      declarations: [ RegisterTitheComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TitheComponent);
+    fixture = TestBed.createComponent(RegisterTitheComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
