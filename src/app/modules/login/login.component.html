@@ -9,7 +9,11 @@
           </div>
           <p>Gerenciamento de dízimos e ofertas.</p>
         </div>
-        <form action="" class="form-login">
+        <form
+          [formGroup]="loginForm"
+          (ngSubmit)="onSubmit()"
+          class="form-login"
+        >
           <mat-form-field
             appearance="outline"
             floatLabel="always"
@@ -19,7 +23,22 @@
             <mat-icon matPrefix>
               <lucide-icon name="user-round"></lucide-icon>
             </mat-icon>
-            <input type="email" matInput placeholder="Digite seu usuário" />
+            <input
+              type="email"
+              matInput
+              placeholder="Digite seu usuário"
+              formControlName="email"
+            />
+            <mat-error *ngIf="loginForm.get('email')?.hasError('required')"
+              >Insirir e-mail é obrigatório</mat-error
+            >
+            <mat-error
+              *ngIf="
+                loginForm.get('email')?.hasError('email') &&
+                !loginForm.get('email')?.hasError('required')
+              "
+              >Por favor, insira um e-mail válido</mat-error
+            >
           </mat-form-field>
           <mat-form-field
             appearance="outline"
@@ -30,9 +49,20 @@
               <lucide-icon name="lock"></lucide-icon>
             </mat-icon>
             <mat-label>Senha</mat-label>
-            <input type="password" matInput placeholder="Digite sua senha" />
+            <input
+              type="password"
+              matInput
+              placeholder="Digite sua senha"
+              formControlName="password"
+            />
+            <mat-error *ngIf="loginForm.get('password')?.hasError('required')"
+              >Por favor, insira sua senha.</mat-error
+            >
           </mat-form-field>
-          <button class="button-form" (click)="navigateToDashboard()">Entrar</button>
+          <div *ngIf="loginForm.hasError('invalid')">
+            <mat-error>Usuário ou senha incorretos</mat-error>
+          </div>
+          <button type="submit" class="button-form">Entrar</button>
         </form>
       </div>
       <div class="welcome">
