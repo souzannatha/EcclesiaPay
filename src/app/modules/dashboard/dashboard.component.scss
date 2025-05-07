@@ -1,166 +1,22 @@
+.content-wrapper {
+  min-width: 100vw;
+  background-color: #F5F5F5;
+}
 .content-phrase {
-  max-width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  text-align: center;
+  background-color: #FFFFFF;
+  border: 1px solid #D1D1D4;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 2rem 1rem 0rem 1rem;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
   h2 {
-    font-size: 1.75rem;
-    font-weight: 500;
-    max-width: 800px;
-    line-height: 1.4;
-    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #384151;
   }
-}
-
-  .phrase-actions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    width: 900px;
-    max-width: 100%;
-  }
-
-.search-field {
-  width: 400px;
-  mat-icon {
-    color: rgba(0, 0, 0, 0.54);
-  }
-  input {
+  p{
     font-size: 1rem;
+    color: #6B7280;
+    font-weight: 500;
   }
 }
-
-.add-dizimista {
-  height: 50px;
-  font-weight: 600;
-  padding: 1.2rem 2rem;
-  white-space: nowrap;
-  margin-left: 1rem;
-}
-
-.author-highlight {
-  color: #6A0DAD;
-  font-weight: 600;
-}
-
-.dashboard-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.metric-card {
-  width: 250px;
-  height: 250px;
-  background: #ffffff; // mais contraste que o cinza anterior
-  border-radius: 1.5rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // mais intensa
-  border: 2px solid rgba(106, 13, 173, 0.15); // borda com leve roxo
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-
-  .metric-icon {
-    margin-bottom: 1rem;
-    color: #4a148c;
-  }
-  .metric-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0.5rem 0;
-    color: #333;
-  }
-
-  .metric-value {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin: 0.25rem 0;
-    color: #4a148c;
-  }
-
-  .metric-desc {
-    font-size: 0.875rem;
-    color: #666;
-  }
-}
-.birthday-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 30px;
-}
-
-.birthday-section h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.birthday-table {
-  width: 100%;
-  max-width: 800px;
-  border-collapse: collapse;
-}
-
-.birthday-table-header {
-  display: grid;
-  grid-template-columns: 2fr 2fr 3fr; /* Ajustado para mais espaço para 'Desde Quando é Dizimista' */
-  background-color: #6a0dad;
-  color: #fff;
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.birthday-table-row {
-  display: grid;
-  grid-template-columns: 2fr 2fr 3fr;
-  align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-.birthday-table-cell {
-  padding: 10px;
-  text-align: center;
-}
-
-
-.birthday-photo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-
-.birthday-name {
-  font-weight: bold;
-}
-
-.birthday-date {
-  font-size: 14px;
-  color: #888;
-}
-
-

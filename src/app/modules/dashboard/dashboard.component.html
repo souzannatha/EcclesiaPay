@@ -1,63 +1,8 @@
 <div class="content-wrapper">
   <div class="content-phrase">
-    <h2>
-      {{ messageText }} –
-      <span class="author-highlight">{{ messageAuthor }}</span>
-    </h2>
-
-    <div class="phrase-actions">
-      <div>
-        <mat-form-field appearance="outline" class="search-field">
-          <mat-label>Pesquisar</mat-label>
-          <input matInput placeholder="Ex. Nathã Souza Lopes" #input />
-          <mat-icon matPrefix>search</mat-icon>
-        </mat-form-field>
-        <button
-          mat-raised-button
-          color="primary"
-          (click)="openDialog()"
-          class="add-dizimista"
-        >
-          Adicionar Dizimista
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="dashboard-cards">
-    <div class="metric-card">
-      <mat-icon class="metric-icon" color="primary">groups</mat-icon>
-      <h3 class="metric-title">Total de Dizimistas</h3>
-      <p class="metric-value">238</p>
-      <span class="metric-desc">Cadastrados ativos e inativos</span>
-    </div>
-
-    <div class="metric-card">
-      <mat-icon class="metric-icon" color="accent">payments</mat-icon>
-      <h3 class="metric-title">Valor Arrecadado</h3>
-      <p class="metric-value">R$ 12.450,00</p>
-      <span class="metric-desc">Total no mês</span>
-    </div>
-
-    <div class="metric-card">
-      <mat-icon class="metric-icon" color="warn">person_add</mat-icon>
-      <h3 class="metric-title">Novos no Mês</h3>
-      <p class="metric-value">+15</p>
-      <span class="metric-desc">Entraram em abril</span>
-    </div>
-  </div>
-  <div class="birthday-section">
-    <h3>Aniversariantes do Mês</h3>
-    <div class="birthday-table">
-      <div class="birthday-table-header">
-        <div class="birthday-table-cell">Nome</div>
-        <div class="birthday-table-cell">Data de Aniversário</div>
-        <div class="birthday-table-cell">Desde Quando é Dizimista</div>
-      </div>
-      <div class="birthday-table-row">
-        <div class="birthday-table-cell">José da Silva</div>
-        <div class="birthday-table-cell">15 de Abril</div>
-        <div class="birthday-table-cell">Janeiro de 2020</div>
-      </div>
+    <div>
+      <h2>{{ messageText }}</h2>
+      <p>- {{ messageAuthor }}</p>
     </div>
   </div>
 </div>
