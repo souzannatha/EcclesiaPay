@@ -1,8 +1,34 @@
 <div class="content-wrapper">
-  <div class="content-phrase">
-    <div>
-      <h2>{{ messageText }}</h2>
-      <p>- {{ messageAuthor }}</p>
+  <div class="content-view">
+    <div class="content-phrase">
+      <div>
+        <h2>{{ messageText }}</h2>
+        <p>- {{ messageAuthor }}</p>
+      </div>
+    </div>
+    <mat-form-field
+      appearance="outline"
+      floatLabel="always"
+      class="full-width-input"
+    >
+      <mat-icon matPrefix>
+        <lucide-icon name="search"></lucide-icon>
+      </mat-icon>
+      <input matInput placeholder="Buscar dizimista" type="text" />
+    </mat-form-field>
+    <button type="submit" class="btn-tithe">Pesquisar dizimista</button>
+    <div class="card-content">
+      <app-card
+        [title]="'Total de dizimistas'"
+        [icon]="'users'"
+        [numbers]="12"
+      />
+      <app-card
+        [title]="'Valor arrecadado no mês'"
+        [numbers]="12000"
+        [icon]="'PiggyBank'"
+      />
+      <app-card [title]="'Novos no mês'" [numbers]="+15" [icon]="'user-plus'" />
     </div>
   </div>
 </div>

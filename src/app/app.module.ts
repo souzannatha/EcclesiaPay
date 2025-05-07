@@ -19,8 +19,11 @@ import {
   Lock,
   LogInIcon,
   LucideAngularModule,
-  LucideLogIn,
   UserRound,
+  Search,
+  Users,
+  PiggyBank,
+  UserPlus,
 } from 'lucide-angular';
 
 import { LoginComponent } from './modules/login/login.component';
@@ -31,6 +34,7 @@ import { DialogInputComponent } from './components/dialog-input/dialog-input.com
 import { HistoryComponent } from './modules/history/history.component';
 import { RegisterTitheComponent } from './modules/register-tithe/register-tithe.component';
 import { BirthdayComponent } from './modules/birthday/birthday.component';
+import { CardComponent } from './shared/card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +45,7 @@ import { BirthdayComponent } from './modules/birthday/birthday.component';
     HistoryComponent,
     RegisterTitheComponent,
     BirthdayComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,15 @@ import { BirthdayComponent } from './modules/birthday/birthday.component';
     FormsModule,
     MatPaginatorModule,
     MatCardModule,
-    LucideAngularModule.pick({ Church, UserRound, Lock }),
+    LucideAngularModule.pick({
+      Church,
+      UserRound,
+      Lock,
+      Search,
+      Users,
+      PiggyBank,
+      UserPlus,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
