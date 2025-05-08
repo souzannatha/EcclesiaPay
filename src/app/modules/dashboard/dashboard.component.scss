@@ -1,10 +1,12 @@
 .content-wrapper {
   min-width: 100vw;
+  min-height: 100vh;
   background-color: #F5F5F5;
 }
 
-.content-view{
-  margin: 0 1rem;
+.content-view {
+  margin: 0rem 1rem;
+  padding: 1rem 0rem;
 }
 
 .content-phrase {
@@ -12,25 +14,30 @@
   border: 1px solid #D1D1D4;
   border-radius: 1rem;
   padding: 1rem;
+
   margin: 1rem 0rem;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+
   h2 {
     font-size: 1.8rem;
     font-weight: bold;
     color: #384151;
   }
-  p{
+
+  p {
     font-size: 1rem;
     color: #6B7280;
     font-weight: 500;
   }
 }
+
 .full-width-input {
-  min-width:40rem;
+  min-width: 40rem;
   margin-bottom: 1rem;
   border-radius: 16px;
   border-color: #FFFFFF;
 }
+
 .btn-tithe {
   background: #1F2937;
   color: #FFFFFF;
@@ -47,6 +54,7 @@
   opacity: 0.9;
   transition: 0.3s;
 }
+
 .card-content {
   display: flex;
   justify-content: space-between;

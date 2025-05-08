@@ -1,0 +1,19 @@
+<div class="birthday-month">
+  <h3>Aniversáriantes do mês</h3>
+</div>
+<table class="table">
+  <thead>
+    <th>Número</th>
+    <th>Nome</th>
+    <th>Data de aniversário</th>
+    <th>Desde quando é Dizimista</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let people of people">
+      <td>{{ people.number }}</td>
+      <td>{{ people.name }}</td>
+      <td>{{ people.birthday }}</td>
+      <td>{{ people.since }}</td>
+    </tr>
+  </tbody>
+</table>

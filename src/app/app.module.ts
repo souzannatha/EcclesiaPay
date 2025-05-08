@@ -35,6 +35,7 @@ import { HistoryComponent } from './modules/history/history.component';
 import { RegisterTitheComponent } from './modules/register-tithe/register-tithe.component';
 import { BirthdayComponent } from './modules/birthday/birthday.component';
 import { CardComponent } from './shared/card/card.component';
+import { TableComponent } from './shared/table/table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { CardComponent } from './shared/card/card.component';
     RegisterTitheComponent,
     BirthdayComponent,
     CardComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,

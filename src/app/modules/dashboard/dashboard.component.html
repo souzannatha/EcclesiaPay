@@ -1,10 +1,8 @@
 <div class="content-wrapper">
   <div class="content-view">
     <div class="content-phrase">
-      <div>
-        <h2>{{ messageText }}</h2>
-        <p>- {{ messageAuthor }}</p>
-      </div>
+      <h2>{{ messageText }}</h2>
+      <p>- {{ messageAuthor }}</p>
     </div>
     <mat-form-field
       appearance="outline"
@@ -30,5 +28,6 @@
       />
       <app-card [title]="'Novos no mês'" [numbers]="+15" [icon]="'user-plus'" />
     </div>
+    <app-table></app-table>
   </div>
 </div>
