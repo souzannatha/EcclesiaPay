@@ -1,1 +1,58 @@
-<p>register-tithe works!</p>
+<div class="register-tithe-content">
+  <lucide-icon size="32" name="church"></lucide-icon>
+  <h2>Cadastro de Dizimista</h2>
+  <div class="register-form">
+    <form action="">
+      <mat-form-field
+        appearance="outline"
+        floatLabel="auto"
+        class="full-width-input"
+      >
+        <mat-label>Nome completo</mat-label>
+        <input type="text" matInput placeholder="Digite seu nome" />
+      </mat-form-field>
+      <div class="form-flex">
+        <mat-form-field
+          appearance="outline"
+          floatLabel="auto"
+          class="full-width-input"
+        >
+          <mat-label>Data de nascimento</mat-label>
+          <input type="text" matInput placeholder="Ex: 27/06/2003" />
+        </mat-form-field>
+        <mat-form-field
+          appearance="outline"
+          floatLabel="auto"
+          class="full-width-input"
+        >
+          <mat-label>Dizimista desde:</mat-label>
+          <input type="text" matInput placeholder="Ex: agosto de 2020" />
+        </mat-form-field>
+      </div>
+      <mat-form-field
+        appearance="outline"
+        floatLabel="auto"
+        class="full-width-input"
+      >
+        <mat-label>Telefone</mat-label>
+        <input
+          type="tel"
+          matInput
+          placeholder="Digite seu número de telefone"
+        />
+      </mat-form-field>
+      <mat-form-field
+        appearance="outline"
+        floatLabel="auto"
+        class="full-width-input"
+      >
+        <mat-label>Endereço</mat-label>
+        <input type="text" matInput placeholder="Digite seu endereço" />
+      </mat-form-field>
+      <div class="button-container">
+        <button type="submit" class="button-form-opacity">Cancelar</button>
+        <button type="submit" class="button-form">Cadastrar</button>
+      </div>
+    </form>
+  </div>
+</div>

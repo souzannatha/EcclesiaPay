@@ -1,5 +1,5 @@
 .content-wrapper {
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   background-color: #F5F5F5;
 }
@@ -29,13 +29,6 @@
     color: #6B7280;
     font-weight: 500;
   }
-}
-
-.full-width-input {
-  min-width: 40rem;
-  margin-bottom: 1rem;
-  border-radius: 16px;
-  border-color: #FFFFFF;
 }
 
 .btn-tithe {
