@@ -24,6 +24,7 @@ import {
   Users,
   PiggyBank,
   UserPlus,
+  CircleUserRound,
 } from 'lucide-angular';
 
 import { LoginComponent } from './modules/login/login.component';
@@ -36,6 +37,7 @@ import { RegisterTitheComponent } from './modules/register-tithe/register-tithe.
 import { BirthdayComponent } from './modules/birthday/birthday.component';
 import { CardComponent } from './shared/card/card.component';
 import { TableComponent } from './shared/table/table.component';
+import { TableHistoryComponent } from './shared/table-history/table-history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +50,7 @@ import { TableComponent } from './shared/table/table.component';
     BirthdayComponent,
     CardComponent,
     TableComponent,
+    TableHistoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +76,7 @@ import { TableComponent } from './shared/table/table.component';
       Users,
       PiggyBank,
       UserPlus,
+      CircleUserRound
     }),
   ],
   providers: [],
