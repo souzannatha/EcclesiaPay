@@ -26,3 +26,27 @@
     font-size: 1rem;
   }
 }
+
+.btn-tithe {
+  background: #1F2937;
+  color: #FFFFFF;
+  padding: 1rem 2rem;
+  border-radius: 0.875rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.btn-tithe:hover {
+  background: #2E3A4B;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.full-width-input {
+  width: 50rem;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  border-color: #FFFFFF;
+}
