@@ -34,10 +34,11 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DialogInputComponent } from './components/dialog-input/dialog-input.component';
 import { HistoryComponent } from './modules/history/history.component';
 import { RegisterTitheComponent } from './modules/register-tithe/register-tithe.component';
-import { BirthdayComponent } from './modules/birthday/birthday.component';
 import { CardComponent } from './shared/card/card.component';
 import { TableComponent } from './shared/table/table.component';
 import { TableHistoryComponent } from './shared/table-history/table-history.component';
+import { UserManagementComponent } from './modules/user-management/user-management.component';
+import { TableManagementComponent } from './shared/table-management/table-management.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,10 +48,11 @@ import { TableHistoryComponent } from './shared/table-history/table-history.comp
     DialogInputComponent,
     HistoryComponent,
     RegisterTitheComponent,
-    BirthdayComponent,
     CardComponent,
     TableComponent,
     TableHistoryComponent,
+    UserManagementComponent,
+    TableManagementComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +78,7 @@ import { TableHistoryComponent } from './shared/table-history/table-history.comp
       Users,
       PiggyBank,
       UserPlus,
-      CircleUserRound
+      CircleUserRound,
     }),
   ],
   providers: [],

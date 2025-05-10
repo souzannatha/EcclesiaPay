@@ -4,7 +4,7 @@ import { LoginComponent } from './modules/login/login.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { HistoryComponent } from './modules/history/history.component';
 import { RegisterTitheComponent } from './modules/register-tithe/register-tithe.component';
-import { BirthdayComponent } from './modules/birthday/birthday.component';
+import { UserManagementComponent } from './modules/user-management/user-management.component';
 
 const routes: Routes = [
   {
@@ -24,8 +24,8 @@ const routes: Routes = [
     component: RegisterTitheComponent,
   },
   {
-    path: 'birthday',
-    component: BirthdayComponent,
+    path: 'management',
+    component: UserManagementComponent,
   },
 ];
 
