@@ -1,4 +1,4 @@
-@import  '../../../styles/variables';
+@import '../../../styles/variables';
 
 .wrapper {
   margin: 0;
@@ -19,7 +19,6 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   overflow: hidden;
-
 }
 
 .form-container {
@@ -99,11 +98,14 @@
   background: #F3F4F6;
 }
 
-.welcome,.welcome-icon,.welcome-title {
+.welcome,
+.welcome-icon,
+.welcome-title {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .welcome {
   flex-direction: column;
 }
@@ -115,11 +117,14 @@
   border-radius: 50%;
   margin-bottom: 2rem;
 }
+
 .welcome-title {
   flex-direction: column;
+
   h2 {
     font-size: 2rem;
   }
+
   p {
     font-size: 0.875rem
   }
